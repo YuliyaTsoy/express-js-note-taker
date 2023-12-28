@@ -6,7 +6,7 @@ Note Taker is an application that can be used to write and save notes. It uses a
 
 The application’s front end and back end are connected and deployed to Heroku.
 
-[Heroku Deployment Link](https://dashboard.heroku.com/apps/express-js-note-taker706)
+[Heroku Deployment Link](https://express-js-note-taker706-eed76391d2bd.herokuapp.com/)
 
 ## User Story
 
