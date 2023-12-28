@@ -1,11 +1,13 @@
 // DEPENDANCIES
 const express = require("express");
-const fs = require("fs");
-// const path = require('path');
+const path = require('path');
+const apiRoutes = require('./routes/apiRoutes');
+const htmlRoutes = require('./routes/htmlRoutes');
 
 // APP / PORT
 const app = express();
 const PORT = process.env.PORT || 3001;
+
 
 // MIDDLEWARES
 // Middleware for parsing JSON and urlencoded form data
@@ -15,8 +17,8 @@ app.use(express.json());
 app.use(express.static('public'));
 
 // ROUTES
-require('./routes/apiRoutes.js')(app);
-require('./routes/htmlRoutes.js/index.js')(app);
+app.use(apiRoutes);
+app.use(htmlRoutes);
 
 // START SERVER
 app.listen(PORT, () => console.log(`App listening on port ${PORT}`));
