@@ -21,4 +21,4 @@ app.use(apiRoutes);
 app.use(htmlRoutes);
 
 // START SERVER
-app.listen(PORT, () => console.log(`App listening on port ${PORT}`));
+app.listen(PORT, () => console.log(`App listening on port ${PORT}🚀`));

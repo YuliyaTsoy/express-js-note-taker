@@ -1,15 +1,15 @@
 // DEPENDENCIES
 const path = require('path');
-const html = require('express').Router();
+const router = require('express').Router();
 
  // ROUTES
   // GET Routes: /notes --> returns notes.html
-  html.get('/notes', (req, res) => {
+  router.get('/notes', (req, res) => {
     res.sendFile(path.join(__dirname, '../public/notes.html'));
   });
 
   // GET Route: * --> returns index.html
-  html.get('*', (req, res) => {
+  router.get('*', (req, res) => {
     res.sendFile(path.join(__dirname, '../public/index.html'));
   })
-  module.exports = html;
+  module.exports = router;
