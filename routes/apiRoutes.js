@@ -1,5 +1,5 @@
 // DEPENDENCIES
-// const path = require("path");
+const path = require("path");
 const fs = require("fs");
 const db = require("../db/db.json");
 const uniqid = require("uniqid"); // npm package creating unique Ids
@@ -29,7 +29,7 @@ router.post("/api/notes", (req, res) => {
     let newData = JSON.parse(data);
     // pushing new Note
     newData.push(newNote);
-    // writing new Data to bd.json
+    // writing new Data to db.json
     fs.writeFile("./db/db.json", JSON.stringify(newData), (err) => {
       if (err) throw err;
 
